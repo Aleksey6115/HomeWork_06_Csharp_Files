@@ -193,15 +193,7 @@ namespace HomeWork_06
         {
             DateTime start_time = DateTime.Now; // Время начало операции
 
-            int group_count = 1; // Колличество групп
-            int power_result = 1; // Результат возведения в степень
-
-            // Считаем колличество групп
-            while (power_result < number)
-            {
-                group_count++;
-                power_result = (int) Math.Pow(2, group_count);
-            }
+            int group_count = 1 + (int)Math.Log2(number); // Колличество групп
 
             Console.WriteLine($"Колличество груп для числа {number} будет равным {group_count}");
 
